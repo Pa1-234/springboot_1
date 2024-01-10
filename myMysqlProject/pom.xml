@@ -31,6 +31,11 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version> <!-- Use the version suitable for your MySQL server -->
+        </dependency>
     </dependencies>
 
     <build>
