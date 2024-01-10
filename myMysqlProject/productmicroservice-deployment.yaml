@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservice-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: productmicroservice
+  template:
+    metadata:
+      labels:
+        app: productmicroservice
+    spec:
+      containers:
+        - name: productmicroservice
+          image: pavankumarsangisetti/productmicroservice:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
